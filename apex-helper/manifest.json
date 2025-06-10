@@ -1,0 +1,21 @@
+{
+    "name": "APEX Helper Extention",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Apex Helper",
+    "host_permissions": ["https://course.apexlearning.com/*"],
+    "permissions": [
+    	"activeTab", 
+    	"scripting",
+    	"storage"
+    ],
+    "action": {
+    	"default_popup": "popup/popup.html"
+    },
+    "content_scripts": [
+    	{
+    		"matches": ["https://course.apexlearning.com/*"],
+    		"js": ["content-script.js"]
+    	}
+    ]
+}
