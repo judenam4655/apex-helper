@@ -1,7 +1,7 @@
 const startButton = document.getElementById('get-data');
 const copyButton = document.getElementById('copy-data')
 // const loginButton = document.getElementById('login');
-const OPENAIAPIKEY = '';
+const key = '';
 
 startButton.onclick = async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
@@ -33,7 +33,7 @@ startButton.onclick = async () => {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${OPENAIAPIKEY}`
+            "Authorization": `Bearer ${key}`
         },
         body: JSON.stringify({
             model: "gpt-4.1",
