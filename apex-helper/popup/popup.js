@@ -1,7 +1,6 @@
 const startButton = document.getElementById('get-data');
 const copyButton = document.getElementById('copy-data')
 // const loginButton = document.getElementById('login');
-const key = '';
 
 startButton.onclick = async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
