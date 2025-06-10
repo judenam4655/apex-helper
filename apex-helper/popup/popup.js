@@ -1,7 +1,7 @@
 const startButton = document.getElementById('get-data');
 const copyButton = document.getElementById('copy-data')
 // const loginButton = document.getElementById('login');
-const OPENAIAPIKEY = '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';
+const OPENAIAPIKEY = '';
 
 startButton.onclick = async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
